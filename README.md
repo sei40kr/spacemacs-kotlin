@@ -1,2 +1,3 @@
 # spacemacs-kotlin
-Kotlin layer for Spacemacs
+
+Kotlin layer for Spacemacs.
