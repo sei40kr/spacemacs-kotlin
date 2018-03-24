@@ -9,4 +9,30 @@
 ;;
 ;;; License: MIT
 
-(setq spacemacs-kotlin-packages '())
+(setq spacemacs-kotlin-packages
+  '(
+     kotlin-mode
+     popwin))
+
+(defun spacemacs-quickrun/pre-init-popwin ()
+  (spacemacs|use-package-add-hook popwin
+    :post-config
+    (push '("*KotlinREPL*"
+             :dedicated t
+             :position bottom
+             :stick t
+             :noselect nil
+             :height 0.4)
+      popwin:special-display-config)))
+
+(defun spacemacs-kotlin/init-kotlin-mode ()
+  (use-package kotlin-mode
+    :defer t
+    :config
+    (progn
+      (spacemacs/declare-prefix-for-mode 'kotlin-mode "mr" "repl")
+      (spacemacs/set-leader-keys-for-major-mode 'kotlin-mode
+        "r'" 'kotlin-repl
+        "rl" 'kotlin-send-line
+        "rr" 'kotlin-send-region
+        "rb" 'kotlin-send-buffer))))
