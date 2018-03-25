@@ -25,9 +25,9 @@ To use this configuration layer, add it to your `~/.spacemacs`. You will need to
 
 ## REPL (kotlin-mode)
 
-|Key Binding|Description|
-|--|---|
-|`SPC m '` |Open the Kotlin REPL |
-|`SPC m l` |Send line to the Kotlin REPL |
-|`SPC m r` |Send current region to the Kotlin REPL |
-|`SPC m b` |Send current buffer contents to the Kotlin REPL|
+| Key Binding | Description                                     |
+|-------------|-------------------------------------------------|
+| `SPC m '`   | Open the Kotlin REPL                            |
+| `SPC m l`   | Send line to the Kotlin REPL                    |
+| `SPC m r`   | Send current region to the Kotlin REPL          |
+| `SPC m b`   | Send current buffer contents to the Kotlin REPL |
