@@ -1,7 +1,5 @@
 # spacemacs-kotlin
 
-Kotlin layer for Spacemacs.
-
 # Table of Contents
 
 - [Description](#description)
