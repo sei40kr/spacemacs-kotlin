@@ -14,19 +14,16 @@
      kotlin-mode
      popwin))
 
-(defun spacemacs-kotlin/init-kotlin-mode ()
-  (use-package kotlin-mode
-    :defer t
-    :init
-    (add-to-list 'auto-mode-alist '("\\.kts$" . kotlin-mode))
-    :config
-    (progn
-      (spacemacs/declare-prefix-for-mode 'kotlin-mode "mr" "repl")
-      (spacemacs/set-leader-keys-for-major-mode 'kotlin-mode
-        "r'" 'kotlin-repl
-        "rl" 'kotlin-send-line
-        "rr" 'kotlin-send-region
-        "rb" 'kotlin-send-buffer))))
+(defun spacemacs-kotlin/pre-init-kotlin-mode ()
+  (add-to-list 'auto-mode-alist '("\\.kts$" . kotlin-mode)))
+
+(defun spacemacs-kotlin/post-init-kotlin-mode ()
+  (spacemacs/declare-prefix-for-mode 'kotlin-mode "mr" "repl")
+  (spacemacs/set-leader-keys-for-major-mode 'kotlin-mode
+    "r'" 'kotlin-repl
+    "rl" 'kotlin-send-line
+    "rr" 'kotlin-send-region
+    "rb" 'kotlin-send-buffer))
 
 (defun spacemacs-quickrun/pre-init-popwin ()
   (spacemacs|use-package-add-hook popwin
