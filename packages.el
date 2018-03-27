@@ -17,6 +17,8 @@
 (defun spacemacs-kotlin/init-kotlin-mode ()
   (use-package kotlin-mode
     :defer t
+    :init
+    (add-to-list 'auto-mode-alist '("\\.kts$" . kotlin-mode))
     :config
     (progn
       (spacemacs/declare-prefix-for-mode 'kotlin-mode "mr" "repl")
