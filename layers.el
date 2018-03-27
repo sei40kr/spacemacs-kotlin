@@ -9,4 +9,4 @@
 ;;
 ;;; License: MIT
 
-(configuration-layer/declare-layer '(kotlin))
+(configuration-layer/declare-layer '(spacemacs-visual kotlin))
