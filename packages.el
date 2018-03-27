@@ -25,13 +25,11 @@
     "rr" 'kotlin-send-region
     "rb" 'kotlin-send-buffer))
 
-(defun spacemacs-quickrun/pre-init-popwin ()
-  (spacemacs|use-package-add-hook popwin
-    :post-config
-    (push '("*KotlinREPL*"
-             :dedicated t
-             :position bottom
-             :stick t
-             :noselect nil
-             :height 0.4)
-      popwin:special-display-config)))
+(defun spacemacs-kotlin/post-init-popwin ()
+  (push '("*KotlinREPL*"
+           :dedicated t
+           :position bottom
+           :stick t
+           :noselect nil
+           :height 0.4)
+    popwin:special-display-config))
